@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 
@@ -29,7 +25,7 @@ namespace Calculator.Test.Unit
         public void Multiplication_Multiply4And4()
         {
             var uut = new Calculator();
-            Assert.That(uut.Multiplication(4,4), Is.EqualTo(60));
+            Assert.That(uut.Multiplication(4,4), Is.EqualTo(16));
         }
 
         [Test]
@@ -37,6 +33,27 @@ namespace Calculator.Test.Unit
         {
             var uut = new Calculator();
             Assert.That(uut.Division(60,10), Is.EqualTo(6));
+        }
+
+
+        [Test]
+        public void NumberSquared_4to2()
+        {
+            var uut = new Calculator();
+            Assert.That(uut.NumberSquared(4), Is.EqualTo(16));
+        }
+        [Test]
+        public void Divide_FourAndNull()
+        {
+            var uut = new Calculator();
+            try
+            {
+                Assert.That(uut.Divide(4, 0), Is.EqualTo(0));
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Ooopps, something went wrong... You are dividing by zero");
+            }
         }
     }
 }

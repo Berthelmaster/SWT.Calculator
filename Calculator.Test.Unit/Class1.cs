@@ -40,7 +40,7 @@ namespace Calculator.Test.Unit
         public void NumberSquared_4to2()
         {
             var uut = new Calculator();
-            Assert.That(uut.NumberSquared(4), Is.EqualTo(16));
+            Assert.That(uut.Power(4), Is.EqualTo(16));
         }
         [Test]
         public void Divide_FourAndNull()
@@ -50,10 +50,11 @@ namespace Calculator.Test.Unit
             {
                 Assert.That(uut.Divide(4, 0), Is.EqualTo(0));
             }
-            catch (DivideByZeroException e)
+            catch (DivideByZeroException)
             {
                 Console.WriteLine("Ooopps, something went wrong... You are dividing by zero");
             }
+
         }
     }
 }

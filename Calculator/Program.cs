@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,10 +32,14 @@ namespace Calculator
             return num1 / num2;
         }
 
-        public double NumberSquared(int num1)
+        public double Power(int num1)
         {
             return Math.Pow(num1, 2);
         }
+
+        // THIS IS A TEST
+
+        
 
         public double Divide(double divided, double divisor)
         {
@@ -47,4 +52,6 @@ namespace Calculator
         {
         }
     }
+
 }
+

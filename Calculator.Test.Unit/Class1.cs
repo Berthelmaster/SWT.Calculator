@@ -15,6 +15,13 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
+        public void Addition_Add4and8()
+        {
+            var uut = new Calculator();
+            Assert.That(uut.Addition(4, 8), Is.EqualTo(12));
+        }
+
+        [Test]
         public void Subtraction_Subtract6And6()
         {
             var uut = new Calculator();

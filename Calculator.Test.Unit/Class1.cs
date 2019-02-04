@@ -32,7 +32,7 @@ namespace Calculator.Test.Unit
         public void Division_Divide60And10()
         {
             var uut = new Calculator();
-            Assert.That(uut.Division(60,10), Is.EqualTo(6));
+            Assert.That(uut.Division(50,10), Is.EqualTo(5));
         }
 
 
